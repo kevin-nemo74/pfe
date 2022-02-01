@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mémoire</title>
+
+    <!-- Font families -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@700&family=Ubuntu:ital@1&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo/favicon.ico">
+
+    <!-- Font Awesom -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark ">
+                <a class="navbar-brand" href="#"><i class="fas fa-user-graduate"></i> Suivi des cours </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#title"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope-square"></i>
+                                Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#caractéristique"><i
+                                    class="far fa-question-circle"></i>
+                                Infos</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Titre -->
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="breeSerif">Suivi des cours en se basant sur la technique du QR code</h1>
+                    <button type="button" class="sign-btn btn btn-outline-dark btn-lg" data-toggle="modal"
+                        data-target="#signupModal"><i class="fas fa-user-plus"></i> S'inscrire</button>
+                    <button type="button" class="log-btn btn btn-outline-light btn-lg" data-toggle="modal"
+                        data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Connexion</button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/QR.png" width="400" height="400" class="d-inline-block align-top" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Caractéristique -->
+
+    <section id="caractéristique">
+        <div class="row">
+            <div class="caract-box col-lg-4">
+                <i class="icon fas fa-qrcode fa-4x"></i>
+                <h3>Générer Code QR</h3>
+                <p>Générer un QR code pour un utilisateur ou une séance</p>
+            </div>
+            <div class="caract-box col-lg-4">
+                <i class="icon fas fa-book-reader fa-4x"></i>
+                <h3>Suivez les cours</h3>
+                <p>L'utilisateur peut suivre tous les cours</p>
+            </div>
+            <div class="caract-box col-lg-4">
+                <i class="icon fas fa-bell fa-4x"></i>
+                <h3>Notification</h3>
+                <p>L'utilisateur peut connaître tout changement ou ajout dans l'emploi du temps</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- cta -->
+
+    <section id="cta">
+        <h3 class="cta-heading">facile à utiliser.</h3>
+        <button type="button" class="sign-btn btn btn-outline-dark btn-lg" data-toggle="modal"
+            data-target="#signupModal"><i class="fas fa-user-plus"></i> S'inscrire</button>
+        <button type="button" class="log-btn btn btn-outline-light btn-lg" data-toggle="modal"
+            data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Connexion</button>
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact"></section>
+
+    <footer id="footer">
+        <i class=" social-icon fab fa-facebook-f"></i>
+        <i class=" social-icon fab fa-instagram"></i>
+        <i class=" social-icon fab fa-twitter"></i>
+        <i class=" social-icon fas fa-envelope"></i>
+        <p>© Copyright 2022</p>
+    </footer>
+
+
+    <!-- forme Connexion -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Connexion</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form action="/ProLogin" method="get">
+                            <div class="form-group">
+                                <select class="form-control" name="role">
+                                    <option value="0">Role</option>
+                                    <option value="3">Chef Département</option>
+                                    <option value="2">Etudiant</option>
+                                    <option value="1">Enseignant</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password"
+                                    placeholder="Mot de passe">
+                            </div>
+                            <button type="submit" class="btn btn-info btn-block btn-round"><i
+                                    class="fas fa-sign-in-alt"></i>
+                                Connexion</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="signup-section">Pas encore membre? <a href="#a" class="text-info" data-toggle="modal"
+                            data-target="#signupModal"> S'inscrire</a>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- forme Inscription -->
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Inscription</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form action="/" method="post">
+                            <div class="form-group mb-0">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6"><input type="text" class="form-control" name="nom"
+                                                placeholder="Nom"></div>
+                                        <div class="col-lg-6"><input type="text" class="form-control" name="prenom"
+                                                placeholder="Prénom">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-6"><input type="date" class="form-control" name="dateN">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" aria-label="Default select example">
+                                                <option selected>Sexe</option>
+                                                <option>Homme</option>
+                                                <option>Femme</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-6"><input type="text" class="form-control" name="groupe"
+                                                placeholder="Groupe">
+                                        </div>
+                                        <div class="col-lg-6"><input type="text" class="form-control" name="filiere"
+                                                placeholder="Filiére"></div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-6"><input type="text" class="form-control" name="Ville"
+                                                placeholder="Ville">
+                                        </div>
+                                        <div class="col-lg-6"><input type="text" class="form-control" name="Adresse"
+                                                placeholder="Adresse">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="motDePasse1"
+                                    placeholder="Mot de passe">
+                            </div>
+                            <button type="submit" class="btn btn-info btn-block btn-round"><i
+                                    class="fas fa-user-plus"></i>
+                                S'inscrire</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+
+</body>
+
+</html>
